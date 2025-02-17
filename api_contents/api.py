@@ -1,15 +1,14 @@
 import requests
-import geocoder
 
 # Get API key from the api_key.txt file
-with open("api_key.txt", "r") as file:
+with open("api_contents/api_key.txt", "r") as file:
     API_KEY = file.read().strip()
 
 # Function to search for events near the current location
 def search_nearby_events(lat, lon, radius=10, unit='miles'):
     base_url = "https://app.ticketmaster.com/discovery/v2/events.json"
     params = {
-        "apikey": api_key,
+        "apikey": API_KEY,
         "latlong": f"{lat},{lon}",
         "radius": radius,
         "unit": unit,
