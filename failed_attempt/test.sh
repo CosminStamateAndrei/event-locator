@@ -1,0 +1,1 @@
+curl -X GET   https://www.eventbriteapi.com/v3/events/1248341265329/?expand=ticket_classes   -H 'Authorization: Bearer VM563APY6T332DKUA5A2' 
